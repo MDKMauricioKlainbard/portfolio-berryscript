@@ -8,9 +8,9 @@ const config = {
     keyboard: true,
     animationDuration: 1500,
     animationTimingFunc: 'ease-in-out',
-    waitForTransition: false,
+    
     breakpoints: {
-        1024: {perView: 1}
+        320: {perView: 1}
     }
 }
 
