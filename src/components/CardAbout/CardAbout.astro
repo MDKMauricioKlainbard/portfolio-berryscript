@@ -1,0 +1,23 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  image: string;
+  reverse: boolean;
+}
+const { name, description, image, reverse } = Astro.props;
+import "./style.less"
+---
+
+<div class="about-card" style={reverse ? "flex-direction: row-reverse" : ""}>
+  <div class="image"><img src="fo.png"/></div>
+  <div class="description">
+    <h3>{name}</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi itaque
+      nihil, suscipit corporis laboriosam officia laborum asperiores eligendi
+      fugit minus nam, harum inventore nostrum reiciendis illum dignissimos
+      earum deleniti quo!
+    </p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.container {
+    background-color: var(--line-soft-color-light);
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+}
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 100%;
+    width: 50%;
+    border-radius: 50px;
+    position: absolute;
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.2s ease-in
+}
+.toggle:hover {
+    background-color: var(--elements-color);
+}
+.dark {
+    right: 2px;
+}
+.light {
+    left: 2px;
+}
+

@@ -1,0 +1,20 @@
+---
+import Banner from '../components/Banner/Banner.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header/Header.astro';
+import AboutSection from '../components/AboutSection/AboutSection.astro';
+import ProjectsSection from '../components/ProjectsSection/ProjectsSection.astro';
+import SkillSection from '../components/SkillSection/SkillSection.astro';
+import ContactSection from '../components/ContactSection/ContactSection.astro';
+---
+
+<Layout title='Portafolio'>
+	<Header/>
+	<Banner/>
+	<main>
+		<AboutSection/>
+		<ProjectsSection/>
+		<SkillSection/>
+		<ContactSection/>
+	</main>
+</Layout>

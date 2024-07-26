@@ -1,0 +1,45 @@
+@import "reset.less";
+@import "mixins.less";
+@import "fonts.less";
+@import "images.less";
+
+:root {
+    .theme-light();
+}
+
+body.dark {
+    .theme-dark();
+}
+
+body {
+    background-color: var(--background-color-light);
+}
+
+h2 {
+    font-family: @section-titles-font;
+    color: var(--title-color-light);
+    font-size: 25px;
+}
+
+h3 {
+    font-family: @text-font;
+    color: var(--text-color-light);
+    font-size: 18px;
+}
+
+p {
+    font-family: @text-font;
+
+}
+
+section {
+    padding: 40px 0 0 0;
+    width: 100%;
+    .justify-items-column();
+    text-align: center;
+}
+
+main {
+    .justify-items-column();
+}
+

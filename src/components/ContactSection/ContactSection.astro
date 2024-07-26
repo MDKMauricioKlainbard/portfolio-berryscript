@@ -1,0 +1,41 @@
+---
+import SectionTitle from "../SectionTitle/SectionTitle.astro";
+import "./style.less";
+---
+
+<section class="contact-section">
+  <SectionTitle title="¡Contáctanos!" />
+  <div class="container-form">
+    <form>
+      <div class="form-element">
+        <div class="text-line">
+          <label for="form-name">Nombre</label>
+          <div class="line-form"></div>
+        </div>
+        <input class="input-form" id="form-name" name="form-name" placeholder="Baya (no) venenosa"/>
+      </div>
+      <div class="form-element">
+        <div class="text-line">
+          <label for="form-email">Email</label>
+          <div class="line-form"></div>
+        </div>
+        <input class="input-form" id="form-email" name="form-email" placeholder="bayaparanadavenenosa@gmail.com"/>
+      </div>
+      <div class="form-element">
+        <div class="text-line">
+          <label for="form-subject">Asunto</label>
+          <div class="line-form"></div>
+        </div>
+        <input class="input-form" id="form-subject" name="form-subject" placeholder="Plan para dominar el huerto"/>
+      </div>
+      <div class="form-element">
+        <div class="text-line">
+          <label for="form-message">Mensaje</label>
+          <div class="line-form"></div>
+        </div>
+        <textarea class="input-form text-form" id="form-message" name="form-message" placeholder="El huerto está lleno de cerezas, ¡esas dulces y horribles cerezas! Pero no te preocupes, tengo un plan secreto..."></textarea>
+      </div>
+      <div class="button-container"><button type="submit">Enviar</button></div>
+    </form>
+  </div>
+</section>

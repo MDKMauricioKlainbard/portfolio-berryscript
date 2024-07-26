@@ -1,0 +1,51 @@
+@import "../../less/fonts.less";
+@import "../../less/mixins.less";
+
+.header {
+    .justify-items-column();
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--background-color-light);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .title-portfolio {
+        width: 100%;
+        padding: 50px 0px;
+        border-bottom: 2.5px solid var(--line-color-light);
+        .justify-items-row();
+        position: relative;
+        h1 {
+            font-family: @portfolio-title-font;
+            color: var(--title-color-light);
+            font-size: 30px;
+            text-align: center;
+            width: fit-content;
+            .justify-items-column();
+            .underline {
+                width: 42%;
+                height: 4px;
+                background-color: var(--line-color-light);
+                position: relative;
+                top: 10px;
+            }
+        }
+        .toggle-container {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+        }
+    }
+    nav {
+        font-family: @text-font;
+        font-size: 10px;
+        width: 100%;
+        overflow-x: hidden;
+        ul {
+            .justify-items-row();
+            li {
+                margin: 10px;
+            }
+        } 
+    }
+}
