@@ -1,0 +1,65 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<div class="markdown-container">
+  <h1>{frontmatter.title}</h1>
+  <div class="modal-svg-general-container">
+    <div class=`modal-svg-container` id={`modal-svg-id-${frontmatter.title}`}></div>
+  </div>
+  
+  <slot />
+  <a href={frontmatter.site} target="_blank">Saber más acerca de {frontmatter.title}</a>
+</div>
+
+<script>
+  import { formattedLightBadges } from "../components/SkillSection/svg";
+  const modalsvgContainer = document.querySelectorAll(".modal-svg-container");
+  const toggle = document.querySelector(".toggle");
+  const createMiniContainers = () => {
+    const theme = localStorage.getItem("theme");
+    modalsvgContainer.forEach((modal) => {
+      const svgKey = modal.id.replace("modal-svg-id-", "");
+      if(theme === "light") {
+        modal.innerHTML = formattedLightBadges[svgKey+"Light"]
+      }
+      if(theme === "dark") {
+        modal.innerHTML = "";
+      }
+    });
+  };
+  createMiniContainers();
+  toggle.addEventListener("click", createMiniContainers);
+</script>
+
+<style lang="less">
+  @import "../less/fonts.less";
+  .markdown-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+      font-family: @section-titles-font;
+      color: var(--title-color);
+      font-size: 40px;
+      width: fit-content;
+    }
+    a {
+      margin: 0 0 20px 0;
+      color: var(--text-color);
+    }
+
+    .modal-svg-general-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .modal-svg-container {
+        width: 50%;
+    }
+    }
+
+   
+    
+  }
+</style>

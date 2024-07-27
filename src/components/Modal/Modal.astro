@@ -1,0 +1,14 @@
+---
+import "./style.less";
+const { info, id } = Astro.props;
+---
+
+<div class="overlay hidden" id=`overlay-${id}`></div>
+<div class="modal hidden" id=`modal-${id}`>
+  <button class="button-close" data-modal-id=`${id}`>X</button>
+  <slot />
+</div>
+
+<script>
+  import "./script.js";
+</script>
