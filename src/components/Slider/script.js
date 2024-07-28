@@ -10,7 +10,7 @@ const config = {
     animationTimingFunc: 'ease-in-out',
     
     breakpoints: {
-        320: {perView: 1}
+        767: {perView: 1}
     }
 }
 

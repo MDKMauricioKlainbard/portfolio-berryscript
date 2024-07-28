@@ -4,4 +4,4 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://figma.com
 ---
 
-Figma es una herramienta de diseño colaborativo basada en la web que permite crear interfaces de usuario, prototipos y diseños gráficos. Facilita la colaboración en tiempo real, permitiendo que múltiples usuarios trabajen simultáneamente en el mismo proyecto. Ofrece una amplia gama de herramientas para diseño, prototipado y feedback, optimizando el flujo de trabajo del diseño.
+Sabemos manejar Figma para crear diseños web realmente llamativos y atractivos. Utilizamos esta herramienta para transformar ideas en interfaces visuales impactantes, asegurando que cada página web no solo sea funcional, sino también estéticamente impresionante. ¡Nuestra creatividad en Figma realmente da vida a los proyectos!

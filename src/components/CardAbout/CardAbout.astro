@@ -5,12 +5,12 @@ interface Props {
   image: string;
   reverse: boolean;
 }
-const { name, description, image, reverse } = Astro.props;
+const { name, image, reverse } = Astro.props;
 import "./style.less"
 ---
 
 <div class="about-card" style={reverse ? "flex-direction: row-reverse" : ""}>
-  <div class="image"><img src="fo.png"/></div>
+  <div class="image"><img src={image} alt="Se supone que aquí debería ir una foto de perfil."/></div>
   <div class="description">
     <h3>{name}</h3>
     <p>

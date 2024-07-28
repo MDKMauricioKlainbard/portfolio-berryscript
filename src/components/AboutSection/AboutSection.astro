@@ -2,10 +2,12 @@
 import CardAbout from "../CardAbout/CardAbout.astro";
 import "./style.less"
 import SectionTitle from "../SectionTitle/SectionTitle.astro"
+const anaisImage = "/images/anais.jpeg"
+const mauricioImage = "/images/mauricio.jpeg"
 ---
 
 <section class="about-section">
     <SectionTitle title="Sobre nosotros"/>
-    <CardAbout name="Mauricio Klainbard" description="" image="" reverse={false}/>
-    <CardAbout name="Anaïs Garrofé" description="" image="" reverse={false}/>
+    <CardAbout name="Mauricio Klainbard" description="" image={mauricioImage} reverse={false}/>
+    <CardAbout name="Anaïs Garrofé" description="" image={anaisImage} reverse={false}/>
 </section>

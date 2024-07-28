@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props;
 </div>
 
 <script>
-  import { formattedLightBadges } from "../components/SkillSection/svg";
+  import { formattedLightBadges, formattedDarkBadges } from "../components/SkillSection/svg";
   const modalsvgContainer = document.querySelectorAll(".modal-svg-container");
   const toggle = document.querySelector(".toggle");
   const createMiniContainers = () => {
@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props;
         modal.innerHTML = formattedLightBadges[svgKey+"Light"]
       }
       if(theme === "dark") {
-        modal.innerHTML = "";
+        modal.innerHTML = formattedDarkBadges[svgKey+"Dark"];
       }
     });
   };
@@ -39,6 +39,7 @@ const { frontmatter } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: var(--text-color);
     h1 {
       font-family: @section-titles-font;
       color: var(--title-color);

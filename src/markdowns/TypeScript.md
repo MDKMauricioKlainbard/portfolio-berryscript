@@ -4,5 +4,4 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://www.typescriptlang.org
 ---
 
-
-TypeScript es un superset de JavaScript que añade tipos estáticos, mejorando la calidad y mantenibilidad del código. Permite detectar errores en tiempo de desarrollo y facilita el desarrollo de aplicaciones grandes y escalables. Se compila a JavaScript, lo que lo hace compatible con cualquier entorno que soporte JavaScript.
+Decidimos avanzar a TypeScript para construir aplicaciones más sólidas y escalables. Este lenguaje nos permite superar las limitaciones de JavaScript al proporcionar un sistema de tipos estáticos, lo que ayuda a evitar errores durante el desarrollo y mejora la calidad del código. TypeScript ha sido clave para crear aplicaciones robustas y bien estructuradas, facilitando un desarrollo más eficiente y libre de errores.

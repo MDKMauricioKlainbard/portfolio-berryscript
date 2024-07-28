@@ -9,6 +9,15 @@
 
 body.dark {
     .theme-dark();
+    input {
+        background-color: rgb(174, 198, 220);
+        color: @text-color-light
+    }
+    textarea {
+        background-color: rgb(174, 198, 220);
+        color: @text-color-light
+    }
+    
 }
 
 body {
@@ -18,13 +27,13 @@ body {
 h2 {
     font-family: @section-titles-font;
     color: var(--title-color);
-    font-size: 25px;
+    font-size: 32px;
 }
 
 h3 {
     font-family: @text-font;
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 p {
@@ -37,6 +46,7 @@ section {
     width: 100%;
     .justify-items-column();
     text-align: center;
+    color: var(--text-color)
 }
 
 main {

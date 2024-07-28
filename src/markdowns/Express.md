@@ -4,4 +4,5 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://expressjs.com/es/
 ---
 
-Express es un framework minimalista y flexible para Node.js, diseñado para crear aplicaciones web y APIs robustas. Facilita la gestión de rutas, middleware y solicitudes HTTP, permitiendo un desarrollo rápido y eficiente de aplicaciones del lado del servidor. Es ampliamente utilizado por su simplicidad y extensibilidad.
+Hemos trabajado en numerosos proyectos con Express, desarrollando APIs que gestionan bases de datos, realizan cálculos complejos y establecen sistemas de filtrado para búsquedas de datos. También hemos implementado sistemas de inicio de sesión utilizando JWT y añadido sistemas de envío de correos electrónicos para una comunicación eficaz. ¡Siempre estamos buscando nuevas formas de optimizar y mejorar nuestras APIs para ofrecer soluciones robustas y eficientes!
+

@@ -4,4 +4,4 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://tailwindcss.com
 ---
 
-Tailwind CSS es un framework de diseño de interfaces que utiliza una metodología de utilidades. Ofrece clases predefinidas para estilizar elementos HTML, permitiendo una personalización rápida y flexible del diseño sin necesidad de escribir CSS personalizado. Ideal para construir interfaces de usuario responsivas y modernas de manera eficiente.
+Usamos Tailwind CSS para simplificar y agilizar tareas que pueden ser demasiado complejas con CSS puro. Este framework de utilidad nos permite aplicar estilos de manera rápida y eficiente, haciendo que el diseño de nuestras aplicaciones sea más flexible y manejable. Tailwind es nuestra herramienta para abordar desafíos de diseño con mayor facilidad y precisión.

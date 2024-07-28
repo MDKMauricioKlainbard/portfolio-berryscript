@@ -1,0 +1,42 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<div class="project-markdown-container">
+  <h1>{frontmatter.title}</h1>
+  <div class="img-project-container">
+    <img src={frontmatter.image} alt={frontmatter.title} />
+  </div>
+  <slot />
+  <a href={frontmatter.site} target="_blank">¡Visita la página del proyecto!</a>
+</div>
+
+<style lang="less">
+  @import "../less/fonts.less";
+  .project-markdown-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--text-color);
+    a {
+      margin: 0 0 20px 0;
+      color: var(--text-color);
+    }
+    .img-project-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 80%;
+        border-radius: 10px;
+      }
+    }
+    h1 {
+      font-family: @section-titles-font;
+      color: var(--title-color);
+      font-size: 40px;
+      width: fit-content;
+    }
+  }
+</style>

@@ -1,0 +1,31 @@
+@import '../../less//mixins.less';
+@import '../../less//fonts.less';
+
+.project-card-container {
+    position: relative;
+
+    width: 50%;
+    .justify-items-column();
+    gap: 20px;
+    .project-card-img {
+        border-radius: 10px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    
+    .project-card-title {
+        font-family: @section-titles-font;
+        color: var(--title-color);
+        font-size: 20px;
+        width: 80%;
+        text-align: center;
+        border: 2px solid var(--line-soft-color);
+        border-radius: 20px;
+        padding: 5px;
+    }
+}

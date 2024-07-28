@@ -2,10 +2,11 @@ const skillContainer = document.querySelector(".skills-container");
 let theme = localStorage.getItem("theme");
 const toggle = document.querySelector(".toggle")
 
-import { formattedLightBadges } from "./svg";
+import { formattedLightBadges, formattedDarkBadges } from "./svg";
 
 const createContainers = () => {
     theme = localStorage.getItem("theme")
+    skillContainer.innerHTML = "";
     if (theme === "light") {
         for (let key in formattedLightBadges) {
             const container = document.createElement('div');
@@ -19,7 +20,15 @@ const createContainers = () => {
     }
     if (theme === "dark") {
 
-        skillContainer.innerHTML = ""
+        for (let key in formattedDarkBadges) {
+            const container = document.createElement('div');
+            container.innerHTML = formattedDarkBadges[key];
+            container.classList.add('badge-container');
+            container.addEventListener("click", () => {
+                openModal(key.toLowerCase().replace("dark", "-badge"))
+            })
+            skillContainer.appendChild(container)
+        }
     }
 }
 

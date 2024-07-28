@@ -4,4 +4,4 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://nextjs.org
 ---
 
-Next.js es un framework de React para el desarrollo web que permite la creación de aplicaciones optimizadas y rápidas. Ofrece renderizado del lado del servidor y generación estática de sitios, mejorando el rendimiento y SEO. Es ideal para construir aplicaciones web modernas, escalables y eficientes.
+Usamos Next.js para desarrollar sitios web extremadamente dinámicos, aprovechando sus capacidades avanzadas para el renderizado. Dominamos el manejo de los ciclos de vida de los componentes y los diferentes tipos de renderizado que ofrece el framework, garantizando aplicaciones web rápidas, eficientes y altamente interactivas.

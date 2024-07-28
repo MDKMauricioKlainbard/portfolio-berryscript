@@ -6,13 +6,14 @@ import "./style.less";
 <section class="contact-section">
   <SectionTitle title="¡Contáctanos!" />
   <div class="container-form">
-    <form>
+    <form class="form-message">
       <div class="form-element">
         <div class="text-line">
           <label for="form-name">Nombre</label>
           <div class="line-form"></div>
         </div>
-        <input class="input-form" id="form-name" name="form-name" placeholder="Baya (no) venenosa"/>
+        <input class="input-form" id="form-name" name="form-name" placeholder="Baya no venenosa"/>
+        <span class="error-field hidden" id="error-name"></span>
       </div>
       <div class="form-element">
         <div class="text-line">
@@ -20,6 +21,7 @@ import "./style.less";
           <div class="line-form"></div>
         </div>
         <input class="input-form" id="form-email" name="form-email" placeholder="bayaparanadavenenosa@gmail.com"/>
+        <span class="error-field hidden" id="error-email"></span>
       </div>
       <div class="form-element">
         <div class="text-line">
@@ -27,6 +29,7 @@ import "./style.less";
           <div class="line-form"></div>
         </div>
         <input class="input-form" id="form-subject" name="form-subject" placeholder="Plan para dominar el huerto"/>
+        <span class="error-field hidden" id="error-subject"></span>
       </div>
       <div class="form-element">
         <div class="text-line">
@@ -34,8 +37,17 @@ import "./style.less";
           <div class="line-form"></div>
         </div>
         <textarea class="input-form text-form" id="form-message" name="form-message" placeholder="El huerto está lleno de cerezas, ¡esas dulces y horribles cerezas! Pero no te preocupes, tengo un plan secreto para liberarnos de ellas..."></textarea>
+        <span class="error-field hidden" id="error-message"></span>
       </div>
-      <div class="button-container"><button type="submit">Enviar</button></div>
+      <div class="button-form"><button type="submit">Enviar</button></div>
+      <span class="error-form hidden">¡Debe rellenar correctamente todos los campos!</span>
+      <span class="successful-form hidden">¡Su email ha sido enviado! Por sí acaso, compruebe que haya ingresado bien su dirección de correo electrónico 
+        para que nos podamos comunicar con usted. ¡Muchas gracias por interesarse en BerryScript!
+      </span>
     </form>
   </div>
 </section>
+
+<script>
+  import "./script.js"
+</script>

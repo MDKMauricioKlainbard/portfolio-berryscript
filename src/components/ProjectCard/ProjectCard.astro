@@ -1,0 +1,13 @@
+---
+const { image, title, id} = Astro.props;
+import "./styles.less";
+---
+
+<div class="project-card-container" id={id}>
+    <div class="project-card-img"><img src={image}/></div>
+    <div class="project-card-title">{title}</div>
+</div>
+
+<script>
+    import "./script.js"
+</script>

@@ -4,4 +4,4 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://es.react.dev
 ---
 
-React es una biblioteca de JavaScript desarrollada por Facebook para construir interfaces de usuario. Facilita la creación de componentes reutilizables y eficientes, manejando el estado y el DOM de manera declarativa. Es ampliamente utilizado para desarrollar aplicaciones web dinámicas y escalables.
+Trabajamos con React para construir interfaces de usuario altamente interactivas y dinámicas. Similar a Next.js, React nos permite manejar eficientemente los ciclos de vida de los componentes y los diferentes tipos de renderizado. En proyectos con Astro, utilizamos islas de React para integrar componentes dinámicos de manera efectiva, mejorando la flexibilidad y el rendimiento de nuestras aplicaciones web.

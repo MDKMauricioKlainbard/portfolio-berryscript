@@ -4,4 +4,4 @@ layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://nodejs.org/en
 ---
 
-Node.js es un entorno de ejecución de JavaScript en el servidor, conocido por su arquitectura basada en eventos y su alta eficiencia. Permite construir aplicaciones escalables y de alto rendimiento, utilizando JavaScript en el backend. Es ideal para aplicaciones en tiempo real y servicios web rápidos y ligeros.
+Nos encanta trabajar con Node.js, ya que facilita la realización de múltiples tareas mediante el uso de sus diversas librerías. Este entorno de ejecución de JavaScript nos permite construir aplicaciones del lado del servidor de manera eficiente, aprovechando su ecosistema robusto para crear soluciones rápidas y efectivas.
