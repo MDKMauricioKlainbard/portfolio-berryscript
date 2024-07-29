@@ -2,28 +2,43 @@
 import "./style.less"
 import ProjectCard from "../ProjectCard/ProjectCard.astro"
 const goldenElfImage = "/images/golden-elf-project.png"
+const tykkeraImage = "/images/tykkera-project.png"
 ---
 
-<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"/>
-<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
-
-<div class="glide">
-    <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides">
-        <li class="glide__slide"><ProjectCard id="card-goldenelf-project" title="Golden Elf" image={goldenElfImage}/></li>
-        <li class="glide__slide"><img src="/public/fo.png"/></li>
-      </ul>
-    </div>
+<div class="swiffy-slider-container">
+  <div class='swiffy-slider slider-item-nogap 
+  slider-item-show2 slider-nav-caretfill 
+  slider-nav-sm slider-nav-outside 
+  slider-nav-visible slider-nav-autoplay
+  slider-nav-autopause slider-indicators-round
+  slider-indicators-outside' data-slider-nav-autoplay-interval="5000"
+  style="--swiffy-slider-nav-light: var(--line-color); --swiffy-slider-animation-timing: ease-in-out;">
+    <ul class="slider-container">
+        <li><ProjectCard title="Golden Elf" image={goldenElfImage} id="goldenelf-project"/></li>
+        <li><ProjectCard title="Tykkera" image={tykkeraImage} id="tykkera-project"/></li>
+    </ul>
   
-    <div class="glide__arrows" data-glide-el="controls">
-        <button style="color:var(--line-color); border-color: var(--line-color); font-weight: bold; z-index: 3; top: 60px" class="glide__arrow glide__arrow--left" data-glide-dir="<">{'<'}</button>
-        <button style="color:var(--line-color); border-color: var(--line-color); font-weight: bold; z-index: 3; top: 60px" class="glide__arrow glide__arrow--right" data-glide-dir=">">{'>'}</button>
-      </div>
+    <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button>
+  
+    <div class="slider-indicators">
+        <button class="active"></button>
+        <button></button>
+        <button></button>
+    </div>
+  </div>
 </div>
 
+<style lang="less">
+  .slider-indicators {
+    button {
+      background-color: var(--line-color);
+    }
+  }
+</style>
 
 
-<script>
-    import "./script.js"
-</script>

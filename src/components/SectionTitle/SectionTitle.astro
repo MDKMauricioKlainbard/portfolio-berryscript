@@ -1,6 +1,6 @@
 ---
 import "./style.less";
-const { title } = Astro.props;
+const { title, id } = Astro.props;
 ---
 
-<h2 class="section-title">{title}<div class="underline"></div></h2>
+<h2 class="section-title" id={id} data-text={title}>{title}<div class="underline"></div></h2>

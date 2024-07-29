@@ -2,10 +2,33 @@
 
 .section-title {
     .justify-items-column();
+    letter-spacing: 4px;
+    position: relative;
     .underline {
         width: 80%;
         height: 3px;
         background-color: var(--line-soft-color);
         margin-top: 5px;
     }
+}
+
+.section-title::before,
+.section-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: var(--title-color);
+}
+
+.section-title::before {
+    -webkit-text-stroke: 6px var(--stroke-color);
+    z-index: -2;
+}
+
+.section-title::after {
+    filter: blur(1px);
+    opacity: 0.6;
+    z-index: -1;
 }

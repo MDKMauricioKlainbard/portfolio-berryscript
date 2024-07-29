@@ -5,19 +5,26 @@ interface Props {
   image: string;
   reverse: boolean;
 }
-const { name, image, reverse } = Astro.props;
+const { name, image, reverse, description } = Astro.props;
+import SectionTitle from "../SectionTitle/SectionTitle.astro";
 import "./style.less"
 ---
 
-<div class="about-card" style={reverse ? "flex-direction: row-reverse" : ""}>
+<div class="about-card" id={reverse ? "anais-card" : "mauricio-card"}>
   <div class="image"><img src={image} alt="Se supone que aquí debería ir una foto de perfil."/></div>
   <div class="description">
-    <h3>{name}</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi itaque
-      nihil, suscipit corporis laboriosam officia laborum asperiores eligendi
-      fugit minus nam, harum inventore nostrum reiciendis illum dignissimos
-      earum deleniti quo!
+    {!reverse ? <div class="conditional-title-viewport">
+      <SectionTitle title="Sobre nosotros" id="about-title-lg"/>
+    </div> : ""}
+    <h3 data-text={name}>{name}</h3>
+    <p data-text={description}>
+      {description}
     </p>
   </div>
 </div>
+
+<script>
+  import "./script.js"
+</script>
+
+

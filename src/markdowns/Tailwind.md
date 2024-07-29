@@ -1,5 +1,5 @@
 ---
-title: Tailwind CSS
+title: Tailwind
 layout: ../layouts/MarkdownBadgeLayout.astro
 site: https://tailwindcss.com
 ---

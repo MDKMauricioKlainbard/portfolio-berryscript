@@ -22,3 +22,10 @@ import "../less/global.less"
     <slot />
   </body>
 </html>
+
+<script>
+  const allP = document.querySelectorAll("p");
+  allP.forEach(p=>{
+    p.setAttribute("data-text", p.innerText)
+  })
+</script>

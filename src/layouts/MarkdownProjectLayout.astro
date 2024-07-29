@@ -14,7 +14,6 @@ const { frontmatter } = Astro.props;
 <style lang="less">
   @import "../less/fonts.less";
   .project-markdown-container {
-    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -22,6 +21,7 @@ const { frontmatter } = Astro.props;
     a {
       margin: 0 0 20px 0;
       color: var(--text-color);
+      font-family: @text-font;
     }
     .img-project-container {
       width: 100%;

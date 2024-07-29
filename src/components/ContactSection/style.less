@@ -1,6 +1,10 @@
 @import '../../less/fonts.less';
 @import '../../less/mixins.less';
 
+.contact-section {
+    margin-bottom: 10px;
+}
+
 .container-form {
     margin-top: 20px;
     border: 8px solid #FFFFFF;
@@ -70,4 +74,39 @@
 .successful-form {
     color: var(--text-color);
     font-family: @text-font;
+}
+
+@media (min-width: 425px) {
+    .container-form {
+        .input-form {
+            font-size: 16px;
+        }
+        form {
+            .text-line {
+                font-size: 18px;
+            }
+            .error-field {
+                font-size: 13px;
+            }
+            .successful-form {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .container-form {
+        form {
+            .text-line {
+                font-size: 22px
+            }
+            .error-field {
+                font-size: 14px;
+            }
+            .successful-form {
+                font-size: 14px;
+            }
+        }
+    }
 }

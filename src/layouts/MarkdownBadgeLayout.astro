@@ -35,7 +35,6 @@ const { frontmatter } = Astro.props;
 <style lang="less">
   @import "../less/fonts.less";
   .markdown-container {
-    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -49,6 +48,7 @@ const { frontmatter } = Astro.props;
     a {
       margin: 0 0 20px 0;
       color: var(--text-color);
+      font-family: @text-font;
     }
 
     .modal-svg-general-container {
@@ -56,7 +56,7 @@ const { frontmatter } = Astro.props;
         display: flex;
         justify-content: center;
         .modal-svg-container {
-        width: 50%;
+        width: 100px;
     }
     }
 
