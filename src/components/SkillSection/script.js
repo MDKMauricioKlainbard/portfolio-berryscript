@@ -5,7 +5,8 @@ const toggle = document.querySelector(".toggle")
 import { formattedLightBadges, formattedDarkBadges } from "./svg";
 
 const createContainers = () => {
-    theme = localStorage.getItem("theme")
+    const body = document.querySelector("body");
+    theme = body.classList.contains("dark") ? "dark" : "light";
     skillContainer.innerHTML = "";
     const MongoDB = "MongoDB"
     const Figma= "Figma";
@@ -40,7 +41,7 @@ const createContainers = () => {
 
 createContainers();
 
-toggle.addEventListener("click", createContainers)
+toggle.addEventListener("click", createContainers, false)
 
 const openModal = (modalId) => {
     document.querySelector(`#overlay-${modalId}`).classList.remove("hidden");

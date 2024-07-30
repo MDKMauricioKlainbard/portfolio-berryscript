@@ -40,4 +40,4 @@ toggle.addEventListener("click", () => {
             transform: 'translateX(0)'
         }
     ], { duration: 200 })
-})
+}, true)
