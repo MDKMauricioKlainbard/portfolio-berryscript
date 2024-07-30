@@ -5,8 +5,7 @@ const toggle = document.querySelector(".toggle")
 import { formattedLightBadges, formattedDarkBadges } from "./svg";
 
 const createContainers = () => {
-    const body = document.querySelector("body");
-    theme = body.classList.contains("dark") ? "dark" : "light";
+    const theme = localStorage.getItem("theme");
     skillContainer.innerHTML = "";
     const MongoDB = "MongoDB"
     const Figma= "Figma";
