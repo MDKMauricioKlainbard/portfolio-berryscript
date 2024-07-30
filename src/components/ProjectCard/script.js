@@ -1,5 +1,4 @@
 const openModal = (modalId) => {
-    console.log(modalId)
     document.querySelector(`#overlay-${modalId}`).classList.remove("hidden");
     document.querySelector(`#modal-${modalId}`).classList.remove("hidden");
 }
