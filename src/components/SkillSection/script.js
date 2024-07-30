@@ -7,6 +7,8 @@ import { formattedLightBadges, formattedDarkBadges } from "./svg";
 const createContainers = () => {
     theme = localStorage.getItem("theme")
     skillContainer.innerHTML = "";
+    const MongoDB = "MongoDB"
+    const Figma= "Figma";
     if (theme === "light") {
         for (let key in formattedLightBadges) {
             const container = document.createElement('div');
@@ -15,6 +17,8 @@ const createContainers = () => {
             container.addEventListener("click", () => {
                 openModal(key.toLowerCase().replace("light", "-badge"))
             })
+            if(key === MongoDB+"Light") container.style = "transform: scale(0.6)"
+            else if(key === Figma+"Light") container.style = "transform: scale(0.8)"
             skillContainer.appendChild(container)
         }
     }
@@ -27,6 +31,8 @@ const createContainers = () => {
             container.addEventListener("click", () => {
                 openModal(key.toLowerCase().replace("dark", "-badge"))
             })
+            if(key === MongoDB+"Dark") container.style = "transform: scale(0.6)"
+            else if(key === Figma+"Dark") container.style = "transform: scale(0.8)"
             skillContainer.appendChild(container)
         }
     }

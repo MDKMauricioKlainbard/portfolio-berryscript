@@ -32,18 +32,24 @@ const { frontmatter } = Astro.props;
   toggle.addEventListener("click", createMiniContainers);
 </script>
 
-<style lang="less">
+<style lang="less" is:global>
   @import "../less/fonts.less";
   .markdown-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: var(--text-color);
+    align-items: center;
+    margin: 4rem;
     h1 {
       font-family: @section-titles-font;
       color: var(--title-color);
       font-size: 40px;
       width: fit-content;
+    }
+    p {
+      width: 90%;
+      text-align: justify;
     }
     a {
       margin: 0 0 20px 0;
@@ -62,5 +68,13 @@ const { frontmatter } = Astro.props;
 
    
     
+  }
+  @media(max-width: 768px) {
+    .markdown-container {
+      margin: 0.5rem;
+      p {
+        text-align: justify; 
+      }
+    }
   }
 </style>

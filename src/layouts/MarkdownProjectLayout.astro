@@ -11,13 +11,19 @@ const { frontmatter } = Astro.props;
   <a href={frontmatter.site} target="_blank">¡Visita la página del proyecto!</a>
 </div>
 
-<style lang="less">
+<style lang="less" is:global>
   @import "../less/fonts.less";
   .project-markdown-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     color: var(--text-color);
+    margin: 4rem;
+    p {
+      text-align: justify;
+      width: 90%;
+    }
     a {
       margin: 0 0 20px 0;
       color: var(--text-color);
@@ -27,8 +33,9 @@ const { frontmatter } = Astro.props;
       width: 100%;
       display: flex;
       justify-content: center;
+      margin: 1rem 0;
       img {
-        width: 80%;
+        width: 90%;
         border-radius: 10px;
       }
     }
@@ -37,6 +44,14 @@ const { frontmatter } = Astro.props;
       color: var(--title-color);
       font-size: 40px;
       width: fit-content;
+    }
+  }
+  @media(max-width: 768px) {
+    .project-markdown-container {
+      margin: 0.5rem;
+      p {
+        text-align: justify; 
+      }
     }
   }
 </style>

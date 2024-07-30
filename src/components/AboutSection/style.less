@@ -8,53 +8,59 @@
         z-index: -3;
     }
     .big-star {
-        width: 200px;
-        height: 200px;
+        width: 12.5rem;
+        height: 12.5rem;
     }
     .small-star {
-        width: 100px;
-        height: 100px;
+        width: 4.21rem;
+        height: 4.21rem;
     }
+}
+
+.star-first-pair {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.star-second-pair {
+    position: absolute;
+    width: 12.5rem;
+    height: 12.5rem;
+    bottom: 0;
+    left: 10%;
 }
 
 .star-1 {
     background-image: var(--star1);
     position: absolute;
-    top: 0;
-    right: 15%;
 }
 
 .star-2 {
     background-image: var(--star2);
     position: absolute;
-    top: 120px;
-    right: 10%;
+    bottom: 1rem;
+    right: -2rem;
 }
 
 .star-3 {
     background-image: var(--star3);
     position: absolute;
-    bottom: -90px;
-    left: 11%;
 }
 
 .star-4 {
     background-image: var(--star4);
     position: absolute;
-    bottom: -10px;
-    left: 24%;
+    right: -1rem;
+    top: 2rem
 }
 
+
+
 @media(min-width: 320px) {
-    .star-1 {
-        right: 4%;
-    }
-    .star-2 {
-        right: 1%;
-    }
-    .star-4{
-        left: 60%;
-    }
+ 
 }
 
 @media(min-width: 768px) {
@@ -68,23 +74,11 @@
             gap: 40px;
         }
     }
-    .star-1 {
-        right: 8%;
-    }
-    .star-4 {
-        left: 35%;
-    }
 }
 
-@media(min-width: 1020px) {
-    .star-4 {
-        left: 30%;
-    }
-}
-
-@media(min-width: 1400px) {
-    .star-4 {
-        left: 25%;
+@media(max-width: 768px) {
+    .star-first-pair {
+        right: 10%;
     }
 }
 

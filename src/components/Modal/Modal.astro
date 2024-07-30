@@ -5,7 +5,7 @@ const { info, id } = Astro.props;
 
 <div class="overlay hidden" id=`overlay-${id}`></div>
 <div class="modal hidden" id=`modal-${id}`>
-  <button class="button-close" data-modal-id=`${id}`>X</button>
+  <div class="button-close-container"><button class="button-close" data-modal-id=`${id}`>X</button></div>
   <slot />
 </div>
 

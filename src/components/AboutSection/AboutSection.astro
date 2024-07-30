@@ -4,16 +4,31 @@ import "./style.less"
 import SectionTitle from "../SectionTitle/SectionTitle.astro"
 const anaisImage = "/images/anais.jpeg"
 const mauricioImage = "/images/mauricio.jpeg"
-const description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit consequuntur vero culpa fugiat omnis soluta neque atque inventore temporibus? Numquam, nihil voluptatem commodi vel accusamus nostrum culpa quisquam itaque ipsum!"
+const mauricioDescription = `¡Hola, hola! Soy Mauricio, un joven estudiante de ingeniería, programación y desarrollo web. Encontré mi pasión en el desarrollo de código cuando programé por primera vez mi propio robot en Arduino, aunque recuerdo que terminé reventando la batería por accidente, ¡pero al menos el robot bailaba!
+Hubo un tiempo en el que no pude centrarme demasiado en la programación, pero la retomé en la universidad cuando me asignaron la tarea de programar métodos numéricos para resolver problemas complejos de ingeniería. Me llevaba tan bien con el código que terminé siendo asistente de clase para enseñarles a otros a programar.
+
+Finalmente, decidí explotar mis capacidades en el mundo comercial y por eso me adentré en el desarrollo web. Mi aprendizaje fue acelerado, pero no sencillo; requirió un gran esfuerzo para alcanzar la experiencia que tengo hoy en día. ¡Claro, todavía hay mucho por aprender! Pero confío plenamente en que puedo ofrecer soluciones a todos sus problemas, ya que no creo en retos imposibles. Gracias a esa mentalidad es que ahora me encuentro aquí.
+
+¡Espero que podamos trabajar juntos!`;
+const anaisDescription = `¡Hola! Soy Anaïs, estudiante de diseño digital. Desde que tengo memoria, siempre me ha encantado dibujar y diseñar. Mi arte ha sido valorado por muchas personas, pero hasta hace poco no encontraba la forma adecuada de transmitir mis habilidades a otros. Hoy he encontrado esa oportunidad ofreciendo mi trabajo como diseñadora.
+
+Me resulta muy agradable y divertido darle colores y forma a las ideas, así como ver el resultado final. Cada proyecto completado me llena de orgullo. Aunque al principio tenía algunas dudas e inseguridades sobre ingresar a este mercado, finalmente decidí dar el gran salto. ¡Espero que podamos colaborar en muchos proyectos juntos!`;
+
+
 ---
 
 <section class="about-section">
     
     <SectionTitle title="Sobre nosotros" id="about-title-sm"/>
-    <div class="star-1 star big-star"></div>
-    <div class="star-2 star small-star"></div>
-    <div class="star-3 star big-star"></div>
-    <div class="star-4 star small-star"></div>
-    <CardAbout name="Mauricio Klainbard" description={description+description} image={mauricioImage} reverse={false}/>
-    <CardAbout name="Anaïs Garrofé" description={description+description} image={anaisImage} reverse={true}/>
+    <div class="star-first-pair">
+        <div class="star-1 star big-star"></div>
+        <div class="star-2 star small-star"></div>
+    </div>
+
+    <div class="star-second-pair">
+        <div class="star-3 star big-star"></div>
+        <div class="star-4 star small-star"></div>
+    </div>
+    <CardAbout name="Mauricio Klainbard" description={mauricioDescription} image={mauricioImage} reverse={false}/>
+    <CardAbout name="Anaïs Garrofé" description={anaisDescription} image={anaisImage} reverse={true}/>
 </section>

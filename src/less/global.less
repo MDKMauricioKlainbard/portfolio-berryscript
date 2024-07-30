@@ -81,6 +81,7 @@ h3 {
 
 p {
     font-family: @text-font;
+    line-height: 2rem
 }
 
 section {
@@ -145,7 +146,7 @@ main {
 button:hover {
     cursor: pointer;
     transform: scale(1.02);
-    transition: transform 0.2s ease-in-out
+    transition: transform 0.2s ease-in-out;
 }
 
 nav {
@@ -156,7 +157,7 @@ nav {
     li:hover {
         cursor: pointer;
         transform: scale(1.02);
-
+        color: var(--line-color)
     }
 }
 
@@ -180,5 +181,12 @@ article:hover {
     cursor: pointer;
     img {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--line-color) 0px 0px 0px 3px;
+    }
+}
+
+@media(max-width: 768px) {
+    p {
+        font-size: 0.8rem;
+        word-spacing: -0.05rem;
     }
 }

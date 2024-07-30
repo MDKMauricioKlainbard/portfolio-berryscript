@@ -25,10 +25,12 @@
         img {
             width: 100%;
             border-radius: 20%;
+            border: 1rem solid var(--text-banner-color);
+
         }
 
         border: 10px solid var(--line-color);
-        padding: 10px;
+        padding: 1rem;
         border-radius: 20%;
     }
 
@@ -83,27 +85,30 @@
         gap: 20px;
         align-items: start;
         padding: 0 40px;
-
+        width: 83%;
         .image {
             width: 50%;
             margin-bottom: 0;
         }
-
         .description {
-              
             display: flex;
             flex-direction: column;
             gap: 10px;
             width: 55%;
         }
-
     }
 }
 
-@media(min-width: 1024px) {
-    .about-card {
+
+
+@media(max-width: 768px) {
+    .about-card{
         .image {
-            width: 400px;
+            border-width: 0.4rem;
+            padding: 0.4rem;
+            img {
+                border-width: 0.4rem;
+            }
         }
     }
 }

@@ -1,0 +1,35 @@
+@import "../../less/mixins.less";
+
+.footer {
+    .justify-items-row();
+    img {
+        color: red;
+    }
+    .social-network {
+        a {
+            svg {
+                width: 3rem;
+            }
+        }
+        a:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .footer {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-bottom: 2rem;
+        border-left: 4px solid var(--line-color);
+        border-right: 4px solid var(--line-color);
+        .social-network {
+            a {
+                svg {
+                    width: 5rem;
+                }
+            }
+        }
+    }
+}
