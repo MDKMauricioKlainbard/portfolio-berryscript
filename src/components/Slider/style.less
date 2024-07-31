@@ -1,9 +1,49 @@
-.swiffy-slider-container {
-  width: 80%;
+.embla-slider-container {
+  .embla {
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+    margin: 0 1rem;
+    .embla__prev {
+      position: absolute;
+      left: 0;
+      top: 40%;
+      svg {
+        transition: transform 0.2s ease-in-out
+      }
+      svg:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+    .embla__next {
+      position: absolute;
+      right: 0;
+      top: 40%;
+      svg {
+        transition: transform 0.2s ease-in-out
+      }
+      svg:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
 }
 
 @media (min-width: 768px) {
-  .swiffy-slider-container {
-    width: 90%;
+  .embla-slider-container {
+    .embla {
+      .embla__slide {
+        flex: 0 0 50%;
+      }
+    }
   }
 }

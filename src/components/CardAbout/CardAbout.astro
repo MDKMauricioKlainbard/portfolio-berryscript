@@ -11,7 +11,7 @@ import "./style.less"
 ---
 
 <div class="about-card" id={reverse ? "anais-card" : "mauricio-card"}>
-  <div class="image"><img src={image} alt="Se supone que aquí debería ir una foto de perfil."/></div>
+  <div class="image"><img src={image} alt="Se supone que aquí debería ir una foto de perfil." loading="lazy"/></div>
   <div class="description">
     {!reverse ? <div class="conditional-title-viewport">
       <SectionTitle title="Sobre nosotros" id="about-title-lg"/>

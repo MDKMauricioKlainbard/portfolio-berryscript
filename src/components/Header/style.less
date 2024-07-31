@@ -41,6 +41,7 @@
         width: 100%;
         overflow-x: hidden;
         color: var(--text-color);
+        position: relative;
         ul {
             .justify-items-row();
             justify-content: space-around;
@@ -89,6 +90,14 @@
                 }
             }
             height: 65px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .header {
+        nav {
+            height: 50px;
         }
     }
 }

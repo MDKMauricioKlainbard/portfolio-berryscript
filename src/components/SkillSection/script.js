@@ -38,7 +38,7 @@ const createContainers = () => {
     }
 }
 
-createContainers();
+document.addEventListener('DOMContentLoaded', createContainers)
 
 toggle.addEventListener("click", createContainers, false)
 

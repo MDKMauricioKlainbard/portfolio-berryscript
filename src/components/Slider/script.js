@@ -1,19 +1,27 @@
-import Glide from '@glidejs/glide'
+import EmblaCarousel from 'embla-carousel'
+import Autoplay from 'embla-carousel-autoplay'
 
-const carousel = document.querySelector(".glide-carousel");
+const rootNode = document.querySelector('.embla')
+const viewportNode = rootNode.querySelector('.embla__viewport')
+const prevButtonNode = rootNode.querySelector('.embla__prev')
+const nextButtonNode = rootNode.querySelector('.embla__next')
 
-const config = {
-    type: 'carousel',
-    perView: 2,
-    autoplay: 5000,
-    hoverpause: true,
-    keyboard: true,
-    animationDuration: 1500,
-    animationTimingFunc: 'ease-in-out',
-    focusAt: 'center',
+const options = {
+    loop: true,
     breakpoints: {
-        767: {perView: 2}
+        '(min-width: 768px)': {
+            slidesToScroll: 2,
+        }
     }
 }
 
-new Glide('.glide',config).mount()
+Autoplay.globalOptions = {
+    delay: 3000, 
+    stopOnMouseEnter: true,
+    stopOnInteraction: true,
+}
+const plugins = [Autoplay()]
+
+const embla = EmblaCarousel(viewportNode, options, plugins)
+prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+nextButtonNode.addEventListener('click', embla.scrollNext, false)

@@ -1,44 +1,31 @@
 ---
-import "./style.less"
-import ProjectCard from "../ProjectCard/ProjectCard.astro"
-const goldenElfImage = "/images/golden-elf-project.png"
-const tykkeraImage = "/images/tykkera-project.png"
+import "./style.less";
+import ProjectCard from "../ProjectCard/ProjectCard.astro";
+
+const goldenElfImage = "/images/golden-elf-project.png";
+const tykkeraImage = "/images/tykkera-project.png";
+const numericalMethodsImage = "/images/numerical-methods-project.png"
+
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js" crossorigin="anonymous" defer></script>
-<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
-
-<div class="swiffy-slider-container">
-  <div class='swiffy-slider slider-item-nogap 
-  slider-item-show2 slider-nav-caretfill 
-  slider-nav-sm slider-nav-outside 
-  slider-nav-visible slider-nav-autoplay
-  slider-nav-autopause slider-indicators-round
-  slider-indicators-outside' data-slider-nav-autoplay-interval="5000"
-  style="--swiffy-slider-nav-light: var(--line-color); --swiffy-slider-animation-timing: ease-in-out;">
-    <ul class="slider-container">
-        <li><ProjectCard title="Golden Elf" image={goldenElfImage} id="goldenelf-project"/></li>
-        <li><ProjectCard title="Tykkera" image={tykkeraImage} id="tykkera-project"/></li>
-    </ul>
-  
-    <button type="button" class="slider-nav"></button>
-    <button type="button" class="slider-nav slider-nav-next"></button>
-  
-    <div class="slider-indicators">
-        <button class="active"></button>
-        <button></button>
-        <button></button>
+<div class="embla-slider-container">
+  <div class="embla">
+    <div class="embla__viewport">
+      <div class="embla__container">
+        <div class="embla__slide"><ProjectCard title="Golden Elf" image={goldenElfImage} id="goldenelf-project"/></div>
+        <div class="embla__slide"><ProjectCard title="Tykkera" image={tykkeraImage} id="tykkera-project"/></div>
+        <div class="embla__slide"><ProjectCard title="Métodos Numéricos" image={numericalMethodsImage} id="numerical-methods-project"></div>
+      </div>
+    </div>
+    <div class="embla__prev">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="var(--line-color)" width="2rem" height="2rem" viewBox="0 0 24 24"><path d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"/></svg>
+    </div>
+    <div class="embla__next">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="var(--line-color)" width="2rem" height="2rem" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"/></svg>
     </div>
   </div>
 </div>
 
-<style lang="less">
-  .slider-indicators {
-    button {
-      background-color: var(--line-color);
-    }
-  }
-</style>
-
-
+<script>
+  import "./script.js";
+</script>
